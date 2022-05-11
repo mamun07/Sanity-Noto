@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 export default function Home() {
   return (
@@ -13,11 +13,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Typography variant="h2" component="h2">
-          Welcome to Sanity Noto
+      <Container maxWidth="xl">
+        <Typography component={'h2'} variant="h2">
+          Sanity noto home page
         </Typography>
-      </main>
+      </Container>
     </div>
   );
 }

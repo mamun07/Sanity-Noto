@@ -1,70 +1,62 @@
 const classes = {
-  section: {
-    marginTop: 1,
-    marginBottom: 1,
-  },
-  smallText: {
-    fontSize: '15px',
-  },
-  main: {
-    marginTop: 2,
-    minHeight: '80vh',
-  },
-  footer: {
-    marginTop: 1,
-    textAlign: 'center',
+  logo: {
+    a: {
+      display: 'flex',
+      alignItems: 'center',
+    },
   },
   appbar: {
-    backgroundColor: '#203040',
-    '& a': {
-      color: '#ffffff',
-      marginLeft: 1,
-    },
+    boxShadow: 'none',
   },
   toolbar: {
+    display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
-  brand: {
-    fontWeight: 'bold',
-    fontSize: '1.5rem',
-  },
-  navbarButton: {
-    color: '#ffffff',
-    textTransform: 'initial',
-  },
-  fullWidth: {
-    width: '100%',
-  },
-  sort: {
-    marginRight: 1,
-  },
-  visible: {
-    display: 'initial',
-  },
-  hidden: {
-    display: 'none',
-  },
-  // search
-
-  searchForm: {
-    border: '1px solid #ffffff',
-    backgroundColor: '#ffffff',
-    borderRadius: 1,
-  },
-  searchInput: {
-    paddingLeft: 1,
-    color: '#000000',
-    '& ::placeholder': {
-      color: '#606060',
+  headerNavbar: {
+    ul: {
+      li: {
+        float: 'left',
+        marginLeft: '15px',
+        a: {
+          color: 'primary.light',
+        },
+      },
     },
   },
-  searchButton: {
-    backgroundColor: '#f8c040',
-    padding: 1,
-    borderRadius: '0 5px 5px 0',
-    '& span': {
-      color: '#000000',
+  headerSearch: {
+    width: '600px',
+    position: 'relative',
+    svg: {
+      position: 'absolute',
+      right: 0,
+      fontSize: '25px',
+      top: 0,
+      transform: 'translate(-15px, 15px)',
+      color: 'rgb(208 111 12)',
     },
+    input: {
+      width: '100%',
+      borderRadius: '50px',
+      overflow: 'hidden',
+      height: '50px',
+      padding: '15px',
+      border: '1px solid',
+      borderColor: 'secondary.dark',
+      transition: '0.3s',
+      '&:hover': {
+        borderColor: 'secondary.light',
+      },
+      '&:focus': {
+        outline: 'none',
+        borderColor: 'secondary.light',
+      },
+    },
+  },
+  // Footer
+  footer: {
+    backgroundColor: 'primary.light',
+    padding: '30px 0',
   },
 };
 

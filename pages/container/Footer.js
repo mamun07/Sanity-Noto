@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Typography, Box, Grid } from '@mui/material';
+import classes from './footer.style';
 
 const Footer = () => {
   return (
-    <Box>
-      <Box>
+    <Box sx={classes.footermain}>
+      <Box sx={classes.footertop}>
         <Container maxWidth="xl">
           <Grid spacing={2} container>
             <Grid item xl={4}>
@@ -22,7 +23,7 @@ const Footer = () => {
           </Grid>
         </Container>
       </Box>
-      <Box>
+      <Box sx={classes.footerbottom}>
         <Container maxWidth="xl">
           <Typography variant="p">
             &copy; 2022 Sanity Noto, all rights reserved.

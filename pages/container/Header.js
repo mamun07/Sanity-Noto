@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 import Image from 'next/image';
 import CartIcon from '@mui/icons-material/ShoppingBasketOutlined';
 
-import classes from '../../utils/styles';
+import classes from './header.style';
 
 const Header = () => {
   return (

@@ -1,25 +1,17 @@
 import React from 'react';
-import { AppBar, Container, Link, Box, TextField } from '@mui/material';
+import { AppBar, Container, Link, Box, Typography, Grid } from '@mui/material';
 import NextLink from 'next/link';
-import classes from '../../utils/classes';
 import Image from 'next/image';
 import CartIcon from '@mui/icons-material/ShoppingBasketOutlined';
-import UserIcon from '@mui/icons-material/VerifiedUserOutlined';
-import SearchIcon from '@mui/icons-material/Search';
+
+import classes from '../../utils/styles';
 
 const Header = () => {
   return (
-    <AppBar
-      position="sticky"
-      sx={{
-        borderBottom: '1px solid',
-        borderColor: 'primary.light2',
-        boxShadow: 'none',
-      }}
-    >
+    <AppBar position="sticky" sx={classes.headermain}>
       <Container maxWidth="xl">
-        <Box sx={classes.toolbar}>
-          <Box sx={classes.logo}>
+        <Grid container spacing={2}>
+          <Grid item xs={2} sx={classes.headerlogo}>
             <NextLink href={'/'} passHref>
               <Link>
                 <Image
@@ -30,30 +22,18 @@ const Header = () => {
                 />
               </Link>
             </NextLink>
-          </Box>
-          <Box sx={classes.headerSearch}>
-            <SearchIcon />
-            <input type="text" placeholder="search here..." />
-          </Box>
-          <Box sx={classes.headerNavbar}>
-            <ul>
-              <li>
-                <NextLink href={'/login'} passHref>
-                  <Link>
-                    <UserIcon />
-                  </Link>
-                </NextLink>
-              </li>
-              <li>
-                <NextLink href={'/cart'} passHref>
-                  <Link>
-                    <CartIcon />
-                  </Link>
-                </NextLink>
-              </li>
-            </ul>
-          </Box>
-        </Box>
+          </Grid>
+          <Grid item xs={8} sx={classes.headerCenter}>
+            <Typography variant="h6">Search</Typography>
+          </Grid>
+          <Grid item xs={2} sx={classes.headerRight}>
+            <NextLink href={'/cart'} passHref>
+              <Link>
+                <CartIcon />
+              </Link>
+            </NextLink>
+          </Grid>
+        </Grid>
       </Container>
     </AppBar>
   );
